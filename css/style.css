@@ -1,0 +1,70 @@
+@font-face { font-family: "Roboto-Thin"; src: url("../fonts/Roboto-Thin.ttf");}
+@font-face { font-family: "Roboto-Regular"; src: url("../fonts/Roboto-Regular.ttf");}
+
+*{
+	outline: none;
+}
+body{
+	font-family: "Roboto-Regular";
+    color: #263b68;
+    background-color: #ffffff;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input:not([type="checkbox"]):not([type="radio"]),
+select,textarea,.btn-save{
+    padding: .5rem 1rem;
+    border: .5px solid #cccccc;
+    border-radius: 3px;
+    width: 100%;
+    color: #263b68;
+
+}
+.btn-save{
+	box-sizing: content-box;
+    background-color:#14b74e;
+    font-weight: 700;
+    cursor: pointer;
+    padding: .8rem 1rem;
+    width: 100%;
+    color: white;
+}
+#cv{
+	display: none;
+}
+.btn-import{
+    padding: .5rem 1rem;
+    border: .5px solid #cccccc;
+    border-radius: 3px;
+    width: 100%;
+    color: #263b68;
+}
+.btn-import .file{
+    background: #e8e8e8;
+    color: #6e6e6e;
+    border:none;
+    width: 160px;
+    height: 100%;
+	padding: .3rem 1rem;
+	font-size: 14px;
+	border-radius: 20px;
+	margin-left: 5px;
+	overflow-x: hidden;
+	visibility: hidden;
+}
+
+select{ 
+	box-sizing:content-box;
+	overflow-y: auto; 
+}
+td{
+    padding: 2px 20px;
+    vertical-align: middle;
+}
+td#comment{
+	vertical-align: top;
+}

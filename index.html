@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Inscription</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="./fpo.png" alt="FPO" height="160px">
+        <form action="inscrire.php" method="post" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td> <label>Civilite </label> </td>
+                    <td> 
+                        <select name="CIVILITE" required>
+                            <option value="Mme">Madam</option>
+                            <option value="Mlle">Mademoiselle</option>
+                            <option value="Mr" selected>Monsieur</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="name">Nom </label> </td>
+                    <td> <input type="text" id="name" name="NAME" required> </td>
+                </tr>
+                <tr>
+                    <td> <label for="lname">Prenom </label> </td>
+                    <td> <input type="text" id="lname" name="LNAME" required> </td>
+                </tr>
+                <tr>
+                    <td> <label for="login">Login </label> </td>
+                    <td> <input type="text" id="login" name="LOGIN" required> </td>
+                </tr>
+                <tr>
+                    <td> <label for="pass">Password </label> </td>
+                    <td> <input type="password" id="pass" name="PASSWORD" required> </td>
+                </tr>
+                <tr>
+                    <td> <label for="rpass">Vérifier Password </label> </td>
+                    <td> <input id="rpass" type="password" required> </td>
+                </tr>
+                <tr>
+                    <td> <label>Genre </label> </td>
+                    <td> 
+                        <input type="radio" id="h" name="GENRE" value="H" checked> <label for="h">Homme</label> 
+                        <input type="radio" id="f" name="GENRE" value="F"> <label for="f">Femme</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="naiss">Date Naissance </label> </td>
+                    <td> <input type="date" id="naiss" name="NAISSANCE" required> </td>
+                </tr>
+                <tr>
+                    <td> <label for="email">E-mail </label> </td>
+                    <td> <input type="email" id="email" name="EMAIL" required> </td>
+                </tr>
+                <tr>
+                    <td> <label for="langue">Langue </label> </td>
+                    <td> 
+                        <input id="hiddenLangue" type="hidden" name="LANGUE" value="AR">
+                        <select id="langue" onchange="OnLangSelect()"  multiple required>
+                            <option value="AR" selected>Arabe</option>
+                            <option value="FR">Francais</option>
+                            <option value="EN">Englais</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="niveau">Niveau </label> </td>
+                    <td> 
+                        <input type="radio" id="n1" name="NIVEAU" value="bac2" checked> <label for="n1">bac +2</label> 
+                        <input type="radio" id="n2" name="NIVEAU" value="bac3"> <label for="n2">bac +3 </label>
+                        <input type="radio" id="n3" name="NIVEAU" value="bac5"> <label for="n3">bac +5 </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="loi">Loisire </label> </td>
+                    <td> 
+                        <input type="checkbox" id="l1" name="LOISIRS[]" value="V" checked><label for="l1"> Voyage </label><br>
+                        <input type="checkbox" id="l2" name="LOISIRS[]" value="L"><label for="l2"> Lecture </label><br>
+                        <input type="checkbox" id="l3" name="LOISIRS[]" value="S"><label for="l3"> Sport </label><br>
+                        <input type="checkbox" id="l4" name="LOISIRS[]" value="I"><label for="l4"> Internet</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="adr">Adresse </label> </td>
+                    <td> <input type="text" id="adr" name="ADRESSE"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="cp">Code Postal </label> </td>
+                    <td> <input type="number" id="cp" name="CP"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="ville">Ville </label> </td>
+                    <td> <input type="text" id="ville" name="VILLE"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="pay">Paye </label> </td>
+                    <td> <input type="text" id="pay" name="PAYE"> </td>
+                </tr>
+                <tr>
+                    <td id="comment"> <label for="comm">Commentaire </label> </td>
+                    <td> 
+                        <textarea name="COMMENTAIRE" id="comm" cols="22" rows="4"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="cv">Cv </label> </td>
+                    <td> 
+                        <input onchange="OnFileUpload()" type="file" id="cv" name="CVFILE">
+                        <div class="btn-import">
+                            <label for="cv">
+                                <b>Importer ton CV</b>
+                                <button class="file" id="filename" disabled>&nbsp;</button>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <br>
+                        <button type="submit" class="btn-save">Enregistrer</button>
+                    </td>
+                </tr>
+                
+            </table>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="js/inscription.js"></script>
+</body>
+</html>
